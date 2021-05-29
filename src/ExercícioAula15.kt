@@ -32,7 +32,6 @@ class Documento(
     override val nome: String,
     override val tipoDocumento: String
 ): ImprimivelAula15 {
-
     override fun imprimir() {
         println("Eu sou um documento word - $nome - $tipoDocumento")
     }

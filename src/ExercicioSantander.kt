@@ -22,7 +22,6 @@ open class Conta(cliente: Cliente) {
     fun deposito(valor: Double) {
         saldo += valor
         println("O novo saldo é $saldo")
-
     }
 
     open fun sacar() {
