@@ -1,11 +1,11 @@
 fun main() {
     val cesar = Cliente(1234, "Rodrigues", "23123", 2343242)
-    //val contaPoupancaCaixa = ContaPoupanca(cliente = cesar)
-    //contaPoupancaCaixa.deposito(200.0)
-    //contaPoupancaCaixa.recolherJuros()
+    val contaPoupancaCaixa = ContaPoupanca1(cliente = cesar)
+    contaPoupancaCaixa.deposito(200.0)
+    contaPoupancaCaixa.recolherJuros()
 
-    //val contaCorrentItau = ContaCorrente(cliente = cesar)
-    //contaCorrentItau.sacar()
+    val contaCorrentItau = ContaCorrente1(cliente = cesar)
+    contaCorrentItau.sacar()
 }
 
 class Cliente(
@@ -25,15 +25,15 @@ open class Conta(cliente: Cliente) {
     }
 
     open fun sacar() {
-        //fazer saque
+        println("fazer saque")
     }
 
     fun consultarSaldo() {
-        //consultar saldo
+       println("consultar saldo")
     }
 }
 
-/*class ContaPoupanca(
+class ContaPoupanca1(
     cliente: Cliente,
     var taxaJuros: Double = 3.5
 ) : Conta(cliente = cliente) {
@@ -45,16 +45,16 @@ open class Conta(cliente: Cliente) {
     }
 }
 
-class ContaCorrente(
+class ContaCorrente1(
     cliente: Cliente
 ) : Conta(cliente = cliente) {
 
     fun depositarCheque() {
-        //depositar um novo cheque
+       println("depositar um novo cheque")
     }
 
     override fun sacar() {
-        //sacar conta corrente
+       println("sacar conta corrente")
     }
 
-}*/
+}
